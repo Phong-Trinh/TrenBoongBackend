@@ -23,6 +23,12 @@
     "blocked": {
       "type": "boolean",
       "default": false
+    },
+    "user_card": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-card.user-card",
+      "inversedBy": "app_users"
     }
   }
 }

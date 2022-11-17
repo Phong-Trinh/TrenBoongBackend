@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-card",
     "pluralName": "user-cards",
-    "displayName": "UserCard"
+    "displayName": "UserCard",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,8 @@
     "app_users": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::app-user.app-user"
+      "target": "api::app-user.app-user",
+      "mappedBy": "user_card"
     },
     "cards": {
       "type": "relation",
