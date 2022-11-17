@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_cards",
+  "info": {
+    "singularName": "user-card",
+    "pluralName": "user-cards",
+    "displayName": "UserCard"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "app_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::app-user.app-user"
+    },
+    "cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}

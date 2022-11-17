@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "categories",
+  "collectionName": "app_users",
   "info": {
-    "singularName": "category",
-    "pluralName": "categories",
-    "displayName": "Card",
+    "singularName": "app-user",
+    "pluralName": "app-users",
+    "displayName": "AppUser",
     "description": ""
   },
   "options": {
@@ -12,17 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "phoneNumber": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "price": {
-      "type": "integer",
-      "required": true
-    },
-    "urlImage": {
+    "name": {
       "type": "string"
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
