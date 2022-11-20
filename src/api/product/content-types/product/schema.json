@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "biginteger"
+    },
+    "card": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::card.card",
+      "inversedBy": "product"
+    },
+    "drink": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::drink.drink",
+      "mappedBy": "product"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "drink",
+        "card"
+      ]
+    }
+  }
+}

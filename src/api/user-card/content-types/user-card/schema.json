@@ -17,11 +17,6 @@
       "relation": "oneToMany",
       "target": "api::app-user.app-user",
       "mappedBy": "user_card"
-    },
-    "cards": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
     }
   }
 }

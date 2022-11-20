@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drinks",
+  "info": {
+    "singularName": "drink",
+    "pluralName": "drinks",
+    "displayName": "Drink",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "drink"
+    },
+    "drink_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::drink-category.drink-category",
+      "inversedBy": "drinks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
