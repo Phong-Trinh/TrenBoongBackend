@@ -21,21 +21,14 @@
       "target": "api::product.product",
       "mappedBy": "card"
     },
-    "Image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "name": {
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "urlImage": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -24,18 +24,13 @@
       "target": "api::drink-category.drink-category",
       "inversedBy": "drinks"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "name": {
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "urlImage": {
+      "type": "string"
     }
   }
 }
