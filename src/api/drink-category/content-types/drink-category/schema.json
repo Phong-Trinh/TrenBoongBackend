@@ -22,6 +22,14 @@
       "relation": "oneToMany",
       "target": "api::drink.drink",
       "mappedBy": "drink_category"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
     }
   }
 }
