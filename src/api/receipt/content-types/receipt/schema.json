@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "receipts",
+  "info": {
+    "singularName": "receipt",
+    "pluralName": "receipts",
+    "displayName": "Receipt",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subscription": {
+      "type": "text"
+    },
+    "subTotal": {
+      "type": "biginteger",
+      "required": true
+    },
+    "total": {
+      "required": true,
+      "unique": false,
+      "type": "biginteger"
+    },
+    "discount": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "app_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::app-user.app-user"
+    },
+    "receipt_details": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::receipt-detail.receipt-detail",
+      "mappedBy": "receipt"
+    }
+  }
+}
