@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coupons",
+  "info": {
+    "singularName": "coupon",
+    "pluralName": "coupons",
+    "displayName": "Coupon",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tittle": {
+      "type": "string",
+      "required": true
+    },
+    "minimumPrice": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "downPrice": {
+      "type": "biginteger",
+      "default": "1000",
+      "required": true
+    },
+    "createdDate": {
+      "type": "date",
+      "required": true
+    },
+    "expirationDate": {
+      "type": "date",
+      "default": "2023-12-31"
+    }
+  }
+}

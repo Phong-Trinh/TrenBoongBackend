@@ -38,6 +38,12 @@
       "relation": "oneToMany",
       "target": "api::receipt-detail.receipt-detail",
       "mappedBy": "receipt"
+    },
+    "user_coupon": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-coupon.user-coupon",
+      "inversedBy": "receipt"
     }
   }
 }
