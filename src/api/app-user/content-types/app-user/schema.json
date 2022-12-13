@@ -17,7 +17,7 @@
       "required": true,
       "unique": true
     },
-    "name": {
+    "firstName": {
       "type": "string"
     },
     "blocked": {
@@ -29,6 +29,18 @@
       "relation": "manyToOne",
       "target": "api::user-card.user-card",
       "inversedBy": "app_users"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
     }
   }
 }
