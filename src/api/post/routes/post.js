@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * user-coupon router
+ * post router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::user-coupon.user-coupon');
+module.exports = createCoreRouter('api::post.post');
