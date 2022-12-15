@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "momo_ipns",
+  "info": {
+    "singularName": "momo-ipn",
+    "pluralName": "momo-ipns",
+    "displayName": "Momo_ipn",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "partnerCode": {
+      "type": "string"
+    },
+    "requestId": {
+      "type": "string"
+    },
+    "orderId": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "biginteger"
+    },
+    "orderInfo": {
+      "type": "string"
+    },
+    "orderType": {
+      "type": "string"
+    },
+    "resultCode": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "text"
+    },
+    "payType": {
+      "type": "string"
+    },
+    "responseTime": {
+      "type": "biginteger"
+    },
+    "extraData": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "transId": {
+      "type": "biginteger"
+    }
+  }
+}
