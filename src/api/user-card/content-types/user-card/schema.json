@@ -12,11 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "app_users": {
+    "app_user": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::app-user.app-user",
-      "mappedBy": "user_card"
+      "relation": "oneToOne",
+      "target": "api::app-user.app-user"
+    },
+    "card": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::card.card"
     }
   }
 }
