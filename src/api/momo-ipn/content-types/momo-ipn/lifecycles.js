@@ -1,7 +1,7 @@
 module.exports = {
   async afterCreate(event) {
     const { result, params } = event;
-
+    if (params.data.resultCode != 0) return;
     cardId = [];
     console.log(params.data.orderId);
     const order = await strapi.entityService.findOne('api::receipt.receipt', params.data.orderId, {
