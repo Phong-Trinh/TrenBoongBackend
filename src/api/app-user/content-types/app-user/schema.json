@@ -14,7 +14,7 @@
   "attributes": {
     "phoneNumber": {
       "type": "string",
-      "required": true,
+      "required": false,
       "unique": true
     },
     "firstName": {
@@ -28,7 +28,8 @@
       "type": "string"
     },
     "email": {
-      "type": "string"
+      "type": "string",
+      "unique": true
     },
     "address": {
       "type": "string"
