@@ -36,6 +36,9 @@
     },
     "url": {
       "type": "string"
+    },
+    "fcm": {
+      "type": "string"
     }
   }
 }

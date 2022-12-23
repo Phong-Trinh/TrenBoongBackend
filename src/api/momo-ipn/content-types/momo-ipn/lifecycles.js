@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 module.exports = {
   async afterCreate(event) {
     const { result, params } = event;
@@ -17,5 +19,20 @@ module.exports = {
         card: element
       }});
     });
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'key=AAAAFtj6z0g:APA91bHI8gLo5cjyDNmAp72ss0QOLOjYjCwJ2vWlx8VJ-Shb6ef8FQG54aJljmKxQEn9Z_lxM0vQmHh3P7R9N1voZDgv_WkLhAZdTzEwidYWxqUtcJ9NNPaNCSWSIfYmtBVd98HqaZDg'
+    }
+      const { data } = await axios.post('https://fcm.googleapis.com/fcm/send', {
+        to : order.app_user.fcm,
+          notification : {
+              title: "Thanh toán thành công!",
+              body: "Đơn hàng đã được thanh toán. Tìm hiểu thêm nhiều tính năng hữu ích khác của Tren Boong"
+          }
+      }, {
+        headers: headers
+      });
+
+      console.log(data);
   },
 };
