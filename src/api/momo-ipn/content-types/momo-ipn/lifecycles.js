@@ -23,6 +23,10 @@ module.exports = {
       'Content-Type': 'application/json',
       'Authorization': 'key=AAAAFtj6z0g:APA91bHI8gLo5cjyDNmAp72ss0QOLOjYjCwJ2vWlx8VJ-Shb6ef8FQG54aJljmKxQEn9Z_lxM0vQmHh3P7R9N1voZDgv_WkLhAZdTzEwidYWxqUtcJ9NNPaNCSWSIfYmtBVd98HqaZDg'
     }
+    function delay(ms){
+      return new Promise(resolve => setTimeout(resolve, ms))
+     }
+     await delay(3000);
       const { data } = await axios.post('https://fcm.googleapis.com/fcm/send', {
         to : order.app_user.fcm,
           notification : {
